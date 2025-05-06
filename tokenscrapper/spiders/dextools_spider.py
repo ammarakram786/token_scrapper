@@ -26,7 +26,7 @@ class DextoolsSpider(scrapy.Spider):
         final_address = self.extract_final_address(response)
 
         # Prepare API URL for price history
-        purchase_time = datetime.strptime(token['Purchase Timestamp'], "%Y-%m-%d %H:%M")
+        purchase_time = datetime.strptime(token['Purchase Timestamp'], "%Y-%m-%d %H:%M:%S")
         from_ts = int(purchase_time.timestamp())
         to_ts = int(datetime.now().timestamp())
 
