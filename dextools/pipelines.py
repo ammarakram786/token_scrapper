@@ -8,6 +8,6 @@
 from itemadapter import ItemAdapter
 
 
-class TokenscrapperPipeline:
+class DextoolsPipeline:
     def process_item(self, item, spider):
         return item

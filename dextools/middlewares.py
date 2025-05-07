@@ -8,20 +8,8 @@ from scrapy import signals
 # useful for handling different item types with a single interface
 from itemadapter import is_item, ItemAdapter
 
-import random
 
-class ProxyMiddleware:
-    def __init__(self):
-        self.proxies = [
-            # Add free proxies here, e.g. 'http://1.2.3.4:8080'
-        ]
-
-    def process_request(self, request, spider):
-        if self.proxies:
-            request.meta['proxy'] = random.choice(self.proxies)
-
-
-class TokenscrapperSpiderMiddleware:
+class DextoolsSpiderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
     # passed objects.
@@ -68,7 +56,7 @@ class TokenscrapperSpiderMiddleware:
         spider.logger.info("Spider opened: %s" % spider.name)
 
 
-class TokenscrapperDownloaderMiddleware:
+class DextoolsDownloaderMiddleware:
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the downloader middleware does not modify the
     # passed objects.

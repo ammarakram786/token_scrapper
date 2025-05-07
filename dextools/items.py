@@ -6,7 +6,7 @@
 import scrapy
 
 
-class TokenscrapperItem(scrapy.Item):
+class DextoolsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
